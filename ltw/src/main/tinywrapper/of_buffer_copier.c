@@ -149,7 +149,7 @@ void glTexSubImage2D(GLenum target,
         return;
     }
     apply_default_state_to_hw();
-    es3_functions.glTexSubImage2D(target, level, xoffset, yoffset, width, height, tgtype, tgformat, newdata);
+    es3_functions.glTexSubImage2D(target, level, xoffset, yoffset, width, height, tgformat, tgtype, newdata);
     free(newdata);
 }
 
