@@ -44,9 +44,9 @@ static bool init_context(context_t* tw_context) {
         tw_context->bound_basebuffers[i] = map;
     }
 
-    tw_context->shader_info_pool = mempool_create(sizeof(struct shader_info_t), 64);
+    tw_context->shader_info_pool = mempool_create(sizeof(shader_info_t), 64);
     if(!tw_context->shader_info_pool) goto fail_dealloc;
-    tw_context->program_info_pool = mempool_create(sizeof(struct program_info_t), 32);
+    tw_context->program_info_pool = mempool_create(sizeof(program_info_t), 32);
     if(!tw_context->program_info_pool) goto fail_dealloc;
     tw_context->framebuffer_pool = mempool_create(sizeof(framebuffer_t), 32);
     if(!tw_context->framebuffer_pool) goto fail_dealloc;
