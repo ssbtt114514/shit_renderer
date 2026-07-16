@@ -4,18 +4,18 @@
 #include <stdio.h>
 #include <string.h>
 
-INTERNAL bool env_istrue_d(const char* name, bool _default) {
+bool env_istrue_d(const char* name, bool _default) {
     const char* env = getenv(name);
     if(env == NULL) return _default;
     return *env == '1';
 }
 
-INTERNAL bool env_istrue(const char* name) {
+bool env_istrue(const char* name) {
     const char* env = getenv(name);
     return env != NULL && *env == '1';
 }
 
-INTERNAL size_t detect_device_memory_mb(void) {
+size_t detect_device_memory_mb(void) {
     FILE* fp = fopen("/proc/meminfo", "r");
     if (!fp) return 2048;
 

@@ -2,6 +2,7 @@
 #include "debug.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
 static inline size_t align_size(size_t size, size_t alignment) {
     return (size + alignment - 1) & ~(alignment - 1);
