@@ -85,13 +85,16 @@ jobs:
           unzip -l "$AAR"
           echo
           echo "=== Native libraries per ABI ==="
-          unzip -Z -1 "$AAR" | grep -E 'lib/[^/]+/libltw\.so' | sort || \
+          # AGP places native libs under jni/<abi>/ in the AAR (older layouts used lib/<abi>/).
+          # Accept either prefix so the check survives future AGP layout changes.
+          unzip -Z -1 "$AAR" | grep -E '(jni|lib)/[^/]+/libltw\.so' | sort || \
             { echo "::error::No libltw.so native libraries found in AAR"; exit 1; }
           echo
           echo "=== Per-ABI presence check ==="
           missing=0
           for abi in armeabi-v7a arm64-v8a x86 x86_64; do
-            if unzip -Z -1 "$AAR" | grep -Fxq "lib/${abi}/libltw.so"; then
+            if unzip -Z -1 "$AAR" | grep -Fxq "jni/${abi}/libltw.so" || \
+               unzip -Z -1 "$AAR" | grep -Fxq "lib/${abi}/libltw.so"; then
               echo "  OK   $abi"
             else
               echo "::error::Missing libltw.so for ABI $abi"
