@@ -43,6 +43,8 @@ jobs:
           TINYWRAPPER_DIR=ltw/src/main/tinywrapper
           "$NDK_PATH/ndk-build" \
             NDK_PROJECT_PATH=null \
+            NDK_OUT="$TINYWRAPPER_DIR/obj" \
+            NDK_LIBS_OUT="$TINYWRAPPER_DIR/libs" \
             APP_BUILD_SCRIPT="$TINYWRAPPER_DIR/Android.mk" \
             NDK_APPLICATION_MK="$TINYWRAPPER_DIR/Application.mk" \
             APP_ABI="armeabi-v7a arm64-v8a x86 x86_64" \
