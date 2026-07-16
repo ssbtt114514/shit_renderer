@@ -73,6 +73,7 @@ static bool init_context(context_t* tw_context) {
         unordered_map_free(tw_context->texture_swztrack_map);
     fail:
     return false;
+}
 
 static void free_context(context_t* tw_context) {
     unordered_map_free(tw_context->shader_map);

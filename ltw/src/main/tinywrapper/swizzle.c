@@ -106,3 +106,14 @@ INTERNAL void swizzle_process_swizzle_param(GLenum target, GLenum swizzle_param,
             break;
     }
 }
+
+void swizzle_begin_batch_update(void) {
+    if(!current_context) return;
+    current_context->swizzle_batch_mode = true;
+    current_context->pending_swizzle_count = 0;
+}
+
+void swizzle_end_batch_update(void) {
+    if(!current_context) return;
+    current_context->swizzle_batch_mode = false;
+}

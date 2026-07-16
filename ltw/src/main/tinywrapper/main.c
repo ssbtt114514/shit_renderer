@@ -327,7 +327,7 @@ const GLubyte* glGetString(GLenum name) {
     }
 }
 
-static bool debug = false;
+bool debug = false;
 
 void glEnable(GLenum cap) {
     if(!current_context) return;
