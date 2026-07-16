@@ -1,8 +1,6 @@
 name: CI
 
-# Comprehensive build, verification and release pipeline for shit renderer (LTW).
-# Builds the native AAR for all supported ABIs, verifies the artifact, and publishes
-# a GitHub Release when a version tag (v*) is pushed.
+# Build native libraries (.so) for all supported ABIs using ndk-build directly.
 
 on:
   push:
@@ -16,14 +14,13 @@ on:
 permissions:
   contents: read
 
-# Cancel superseded runs on the same ref. Keep branch runs to completion.
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
-    name: Build & verify AAR
+    name: Build native libraries
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -31,126 +28,54 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      # Pre-install the platform + NDK pinned by the Gradle build. If the exact NDK
-      # revision is unavailable in the repository, AGP will still install it on demand.
       - name: Install Android platform and NDK
         run: |
           yes | sdkmanager --licenses > /dev/null 2>&1 || true
-          sdkmanager "platforms;android-34" "ndk;28.2.13676358" || \
-            echo "::warning::Could not pre-install NDK; AGP will install it on demand."
+          sdkmanager "platforms;android-34" "ndk;28.2.13676358"
 
-      - name: Cache Gradle
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/gradle.properties') }}
-          restore-keys: |
-            gradle-${{ runner.os }}-
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build release AAR
-        run: ./gradlew :ltw:assembleRelease --no-daemon --stacktrace
-
-      # Verification: ensure the AAR exists, is non-trivial in size, and contains the
-      # expected native libraries for every target ABI.
-      - name: Verify AAR artifact
+      - name: Build native libraries with ndk-build
         run: |
           set -e
-          AAR="ltw/build/outputs/aar/ltw-release.aar"
-          if [ ! -f "$AAR" ]; then
-            echo "::error::AAR was not produced at $AAR"
-            exit 1
-          fi
-          SIZE=$(stat -c%s "$AAR")
-          if [ "$SIZE" -lt 1000 ]; then
-            echo "::error::AAR is suspiciously small ($SIZE bytes); native build likely failed."
-            exit 1
-          fi
-          echo "AAR produced: $AAR ($SIZE bytes)"
+          NDK_PATH=/usr/local/lib/android/sdk/ndk/28.2.13676358
+          TINYWRAPPER_DIR=ltw/src/main/tinywrapper
+          "$NDK_PATH/ndk-build" \
+            NDK_PROJECT_PATH=null \
+            APP_BUILD_SCRIPT="$TINYWRAPPER_DIR/Android.mk" \
+            NDK_APPLICATION_MK="$TINYWRAPPER_DIR/Application.mk" \
+            APP_ABI="armeabi-v7a arm64-v8a x86 x86_64" \
+            APP_PLATFORM=android-21 \
+            -j$(nproc)
+
+      - name: Verify built .so files
+        run: |
+          set -e
+          LIBS_DIR=ltw/src/main/tinywrapper/libs
+          echo "=== Built .so files ==="
+          find "$LIBS_DIR" -name 'libltw.so' -exec ls -lh {} \;
           echo
-          echo "=== AAR contents ==="
-          unzip -l "$AAR"
-          echo
-          echo "=== Native libraries per ABI ==="
-          # AGP places native libs under jni/<abi>/ in the AAR (older layouts used lib/<abi>/).
-          # Accept either prefix so the check survives future AGP layout changes.
-          unzip -Z -1 "$AAR" | grep -E '(jni|lib)/[^/]+/libltw\.so' | sort || \
-            { echo "::error::No libltw.so native libraries found in AAR"; exit 1; }
-          echo
-          echo "=== Per-ABI presence check ==="
+          echo "=== Per-ABI check ==="
           missing=0
           for abi in armeabi-v7a arm64-v8a x86 x86_64; do
-            if unzip -Z -1 "$AAR" | grep -Fxq "jni/${abi}/libltw.so" || \
-               unzip -Z -1 "$AAR" | grep -Fxq "lib/${abi}/libltw.so"; then
-              echo "  OK   $abi"
+            if [ -f "$LIBS_DIR/$abi/libltw.so" ]; then
+              SIZE=$(stat -c%s "$LIBS_DIR/$abi/libltw.so")
+              echo "  OK   $abi ($SIZE bytes)"
             else
               echo "::error::Missing libltw.so for ABI $abi"
               missing=1
             fi
           done
           if [ "$missing" -ne 0 ]; then
-            echo "::error::One or more expected ABIs are missing from the AAR."
             exit 1
           fi
-
-      # Extract the per-ABI .so files from the AAR so they can be consumed directly
-      # without unpacking the AAR manually.
-      - name: Extract native libraries (.so)
-        run: |
-          set -e
-          AAR="ltw/build/outputs/aar/ltw-release.aar"
-          OUT="ltw/build/outputs/native-libs"
-          rm -rf "$OUT"
-          mkdir -p "$OUT"
-          missing=0
-          for abi in armeabi-v7a arm64-v8a x86 x86_64; do
-            mkdir -p "$OUT/$abi"
-            if unzip -p "$AAR" "jni/$abi/libltw.so" > "$OUT/$abi/libltw.so" 2>/dev/null && \
-               [ -s "$OUT/$abi/libltw.so" ]; then
-              :
-            elif unzip -p "$AAR" "lib/$abi/libltw.so" > "$OUT/$abi/libltw.so" 2>/dev/null && \
-                 [ -s "$OUT/$abi/libltw.so" ]; then
-              :
-            else
-              echo "::error::Could not extract libltw.so for ABI $abi"
-              missing=1
-            fi
-            ls -lh "$OUT/$abi/libltw.so"
-          done
-          if [ "$missing" -ne 0 ]; then
-            echo "::error::One or more .so files could not be extracted from the AAR."
-            exit 1
-          fi
-          echo
-          echo "=== Extracted .so files ==="
-          find "$OUT" -name 'libltw.so' -exec ls -lh {} \;
-
-      - name: Upload AAR artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ltw-release-aar
-          path: ltw/build/outputs/aar/ltw-release.aar
-          if-no-files-found: error
-          retention-days: 30
 
       - name: Upload native libraries (.so)
         uses: actions/upload-artifact@v4
         with:
           name: ltw-native-libs
-          path: ltw/build/outputs/native-libs/
+          path: ltw/src/main/tinywrapper/libs/
           if-no-files-found: error
           retention-days: 30
 
@@ -164,12 +89,6 @@ jobs:
       contents: write
 
     steps:
-      - name: Download AAR artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: ltw-release-aar
-          path: artifacts
-
       - name: Download native libraries (.so)
         uses: actions/download-artifact@v4
         with:
@@ -180,7 +99,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            artifacts/ltw-release.aar
             native-libs/*/libltw.so
           generate_release_notes: true
           fail_on_unmatched_files: true
