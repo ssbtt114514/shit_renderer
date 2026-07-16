@@ -1,0 +1,1413 @@
+Android NDK: WARNING:ltw/src/main/tinywrapper/Android.mk:glsl_optimizer: LOCAL_LDFLAGS is always ignored for static libraries    
+Android NDK: WARNING:ltw/src/main/tinywrapper/Android.mk:glsl_optimizer: LOCAL_LDFLAGS is always ignored for static libraries    
+Android NDK: WARNING:ltw/src/main/tinywrapper/Android.mk:glsl_optimizer: LOCAL_LDFLAGS is always ignored for static libraries    
+Android NDK: WARNING:ltw/src/main/tinywrapper/Android.mk:glsl_optimizer: LOCAL_LDFLAGS is always ignored for static libraries    
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_debug_stack.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_vector.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= bitscan.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= vma.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_debug.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= half_float.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_idalloc.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_worklist.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_process.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_dl.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= sparse_array.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= fossilize_db.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= os_file.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= build_id.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_thread.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= rgtc.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_printf.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= fast_idiv_by_const.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= rb_tree.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= disk_cache_os.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= strtod.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= blob.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= os_misc.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_atomic.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= crc32.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= rand_xor.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= register_allocate.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= hash_table.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= double.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= os_memory_fd.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_hash_table.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= futex.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_call_once.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= disk_cache.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= slab.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= softfloat.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_debug_memory.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_queue.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= set.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= simple_mtx.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= mesa-sha1.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= compress.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_math.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= log.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= string_buffer.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= os_socket.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= mesa_cache_db.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= mesa_cache_db_multipart.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_cpu_detect.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_mm.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_debug_describe.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= anon_file.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= format_srgb.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_debug_refcnt.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= os_time.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= dag.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= u_debug_symbol.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= streaming-load-memcpy.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= ralloc.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_link_uniform_initializers.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_initializers.c:27:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_initializers.c:27:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_opt_dead_builtin_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_opt_dead_builtin_varyings.c:54:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_opt_dead_builtin_varyings.c:54:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_lower_xfb_varying.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_xfb_varying.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_xfb_varying.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_lower_packed_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:58:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:142:32: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  142 | vbo_delete_minmax_cache(struct gl_buffer_object *bufferObj);
+      |                                ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:151:53: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  151 | vbo_get_minmax_index(struct gl_context *ctx, struct gl_buffer_object *obj,
+      |                                                     ^
+4 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_lower_atomics.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_atomics.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_atomics.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_lower_samplers_as_deref.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_samplers_as_deref.c:65:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_samplers_as_deref.c:65:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_lower_buffers.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_buffers.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_buffers.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_link_xfb.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_xfb.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_xfb.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_linker.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_linker.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_linker.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_link_uniforms.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniforms.c:32:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniforms.c:32:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_lower_samplers.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_link_atomics.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_atomics.c:29:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_atomics.c:29:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= shader_enums.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_link_uniform_blocks.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_blocks.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_blocks.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= u_debug_stack.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_lower_images.c
+[armeabi-v7a] Compile thumb  : glsl_optimizer <= gl_nir_link_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:58:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:142:32: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  142 | vbo_delete_minmax_cache(struct gl_buffer_object *bufferObj);
+      |                                ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:151:53: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  151 | vbo_get_minmax_index(struct gl_context *ctx, struct gl_buffer_object *obj,
+      |                                                     ^
+4 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= bitscan.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_vector.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_debug.c
+[arm64-v8a] Compile        : glsl_optimizer <= half_float.c
+[arm64-v8a] Compile        : glsl_optimizer <= vma.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_process.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_idalloc.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_worklist.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_dl.c
+[arm64-v8a] Compile        : glsl_optimizer <= os_file.c
+[arm64-v8a] Compile        : glsl_optimizer <= sparse_array.c
+[arm64-v8a] Compile        : glsl_optimizer <= fossilize_db.c
+[arm64-v8a] Compile        : glsl_optimizer <= build_id.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_thread.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_printf.c
+[arm64-v8a] Compile        : glsl_optimizer <= rgtc.c
+[arm64-v8a] Compile        : glsl_optimizer <= rb_tree.c
+[arm64-v8a] Compile        : glsl_optimizer <= fast_idiv_by_const.c
+[arm64-v8a] Compile        : glsl_optimizer <= disk_cache_os.c
+[arm64-v8a] Compile        : glsl_optimizer <= strtod.c
+[arm64-v8a] Compile        : glsl_optimizer <= blob.c
+[arm64-v8a] Compile        : glsl_optimizer <= os_misc.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_atomic.c
+[arm64-v8a] Compile        : glsl_optimizer <= register_allocate.c
+[arm64-v8a] Compile        : glsl_optimizer <= crc32.c
+[arm64-v8a] Compile        : glsl_optimizer <= rand_xor.c
+[arm64-v8a] Compile        : glsl_optimizer <= hash_table.c
+[arm64-v8a] Compile        : glsl_optimizer <= os_memory_fd.c
+[arm64-v8a] Compile        : glsl_optimizer <= double.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_hash_table.c
+[arm64-v8a] Compile        : glsl_optimizer <= softfloat.c
+[arm64-v8a] Compile        : glsl_optimizer <= futex.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_call_once.c
+[arm64-v8a] Compile        : glsl_optimizer <= disk_cache.c
+[arm64-v8a] Compile        : glsl_optimizer <= slab.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_debug_memory.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_queue.c
+[arm64-v8a] Compile        : glsl_optimizer <= set.c
+[arm64-v8a] Compile        : glsl_optimizer <= simple_mtx.c
+[arm64-v8a] Compile        : glsl_optimizer <= mesa-sha1.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_math.c
+[arm64-v8a] Compile        : glsl_optimizer <= compress.c
+[arm64-v8a] Compile        : glsl_optimizer <= mesa_cache_db.c
+[arm64-v8a] Compile        : glsl_optimizer <= os_socket.c
+[arm64-v8a] Compile        : glsl_optimizer <= log.c
+[arm64-v8a] Compile        : glsl_optimizer <= string_buffer.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_cpu_detect.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_mm.c
+[arm64-v8a] Compile        : glsl_optimizer <= mesa_cache_db_multipart.c
+[arm64-v8a] Compile        : glsl_optimizer <= anon_file.c
+[arm64-v8a] Compile        : glsl_optimizer <= format_srgb.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_debug_describe.c
+[arm64-v8a] Compile        : glsl_optimizer <= dag.c
+[arm64-v8a] Compile        : glsl_optimizer <= os_time.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_debug_refcnt.c
+[arm64-v8a] Compile        : glsl_optimizer <= streaming-load-memcpy.c
+[arm64-v8a] Compile        : glsl_optimizer <= u_debug_symbol.c
+[arm64-v8a] Compile        : glsl_optimizer <= ralloc.c
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_link_uniform_initializers.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_initializers.c:27:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_initializers.c:27:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_opt_dead_builtin_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_opt_dead_builtin_varyings.c:54:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_opt_dead_builtin_varyings.c:54:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_lower_packed_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:58:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:142:32: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  142 | vbo_delete_minmax_cache(struct gl_buffer_object *bufferObj);
+      |                                ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:151:53: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  151 | vbo_get_minmax_index(struct gl_context *ctx, struct gl_buffer_object *obj,
+      |                                                     ^
+4 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_lower_xfb_varying.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_xfb_varying.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_xfb_varying.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile++      : glsl_optimizer <= glsl_types.cpp
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_lower_atomics.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_atomics.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_atomics.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_lower_samplers_as_deref.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_samplers_as_deref.c:65:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_samplers_as_deref.c:65:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_lower_buffers.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_buffers.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_buffers.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_link_xfb.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_xfb.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_xfb.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_link_uniforms.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniforms.c:32:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniforms.c:32:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_linker.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_linker.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_linker.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_lower_samplers.c
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_link_atomics.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_atomics.c:29:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_atomics.c:29:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[arm64-v8a] Compile        : glsl_optimizer <= shader_enums.c
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_link_uniform_blocks.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_blocks.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_blocks.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= u_debug_stack.c
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_lower_images.c
+[x86] Compile        : glsl_optimizer <= u_vector.c
+[x86] Compile        : glsl_optimizer <= bitscan.c
+[x86] Compile        : glsl_optimizer <= u_debug.c
+[arm64-v8a] Compile        : glsl_optimizer <= gl_nir_link_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:58:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:142:32: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  142 | vbo_delete_minmax_cache(struct gl_buffer_object *bufferObj);
+      |                                ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:151:53: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  151 | vbo_get_minmax_index(struct gl_context *ctx, struct gl_buffer_object *obj,
+      |                                                     ^
+4 warnings generated.
+[x86] Compile        : glsl_optimizer <= half_float.c
+[x86] Compile        : glsl_optimizer <= vma.c
+[x86] Compile        : glsl_optimizer <= u_idalloc.c
+[x86] Compile        : glsl_optimizer <= u_worklist.c
+[x86] Compile        : glsl_optimizer <= u_process.c
+[x86] Compile        : glsl_optimizer <= u_dl.c
+[x86] Compile        : glsl_optimizer <= os_file.c
+[x86] Compile        : glsl_optimizer <= sparse_array.c
+[x86] Compile        : glsl_optimizer <= fossilize_db.c
+[x86] Compile        : glsl_optimizer <= build_id.c
+[x86] Compile        : glsl_optimizer <= u_thread.c
+[x86] Compile        : glsl_optimizer <= u_printf.c
+[x86] Compile        : glsl_optimizer <= rgtc.c
+[x86] Compile        : glsl_optimizer <= rb_tree.c
+[x86] Compile        : glsl_optimizer <= disk_cache_os.c
+[x86] Compile        : glsl_optimizer <= fast_idiv_by_const.c
+[x86] Compile        : glsl_optimizer <= strtod.c
+[x86] Compile        : glsl_optimizer <= os_misc.c
+[x86] Compile        : glsl_optimizer <= blob.c
+[x86] Compile        : glsl_optimizer <= u_atomic.c
+[x86] Compile        : glsl_optimizer <= register_allocate.c
+[x86] Compile        : glsl_optimizer <= crc32.c
+[x86] Compile        : glsl_optimizer <= rand_xor.c
+[x86] Compile        : glsl_optimizer <= hash_table.c
+[x86] Compile        : glsl_optimizer <= os_memory_fd.c
+[x86] Compile        : glsl_optimizer <= double.c
+[x86] Compile        : glsl_optimizer <= u_hash_table.c
+[x86] Compile        : glsl_optimizer <= futex.c
+[x86] Compile        : glsl_optimizer <= slab.c
+[x86] Compile        : glsl_optimizer <= softfloat.c
+[x86] Compile        : glsl_optimizer <= u_call_once.c
+[x86] Compile        : glsl_optimizer <= disk_cache.c
+[x86] Compile        : glsl_optimizer <= u_queue.c
+[x86] Compile        : glsl_optimizer <= u_debug_memory.c
+[x86] Compile        : glsl_optimizer <= set.c
+[x86] Compile        : glsl_optimizer <= simple_mtx.c
+[x86] Compile        : glsl_optimizer <= u_math.c
+[x86] Compile        : glsl_optimizer <= mesa-sha1.c
+[x86] Compile        : glsl_optimizer <= compress.c
+[x86] Compile        : glsl_optimizer <= mesa_cache_db.c
+[x86] Compile        : glsl_optimizer <= log.c
+[x86] Compile        : glsl_optimizer <= string_buffer.c
+[x86] Compile        : glsl_optimizer <= os_socket.c
+[x86] Compile        : glsl_optimizer <= mesa_cache_db_multipart.c
+[x86] Compile++      : glsl_optimizer <= glsl_types.cpp
+[x86] Compile        : glsl_optimizer <= u_mm.c
+[x86] Compile        : glsl_optimizer <= anon_file.c
+[x86] Compile        : glsl_optimizer <= u_debug_describe.c
+[x86] Compile        : glsl_optimizer <= format_srgb.c
+[x86] Compile        : glsl_optimizer <= os_time.c
+[x86] Compile        : glsl_optimizer <= u_cpu_detect.c
+[x86] Compile        : glsl_optimizer <= u_debug_refcnt.c
+[x86] Compile        : glsl_optimizer <= dag.c
+[x86] Compile        : glsl_optimizer <= streaming-load-memcpy.c
+[x86] Compile        : glsl_optimizer <= u_debug_symbol.c
+[x86] Compile        : glsl_optimizer <= ralloc.c
+[x86] Compile        : glsl_optimizer <= gl_nir_link_uniform_initializers.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_initializers.c:27:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_initializers.c:27:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_opt_dead_builtin_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_opt_dead_builtin_varyings.c:54:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_opt_dead_builtin_varyings.c:54:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_lower_xfb_varying.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_xfb_varying.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_xfb_varying.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_lower_atomics.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_atomics.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_atomics.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_lower_packed_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:58:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:142:32: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  142 | vbo_delete_minmax_cache(struct gl_buffer_object *bufferObj);
+      |                                ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:151:53: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  151 | vbo_get_minmax_index(struct gl_context *ctx, struct gl_buffer_object *obj,
+      |                                                     ^
+4 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_lower_samplers_as_deref.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_samplers_as_deref.c:65:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_samplers_as_deref.c:65:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_lower_buffers.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_buffers.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_buffers.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_link_xfb.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_xfb.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_xfb.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_linker.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_linker.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_linker.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_link_uniforms.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniforms.c:32:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniforms.c:32:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_lower_samplers.c
+[x86] Compile        : glsl_optimizer <= gl_nir_link_atomics.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_atomics.c:29:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_atomics.c:29:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= gl_nir_link_uniform_blocks.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_blocks.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_blocks.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86] Compile        : glsl_optimizer <= shader_enums.c
+[x86_64] Compile        : glsl_optimizer <= u_debug_stack.c
+[x86] Compile        : glsl_optimizer <= gl_nir_lower_images.c
+[x86_64] Compile        : glsl_optimizer <= u_vector.c
+[x86] Compile        : glsl_optimizer <= gl_nir_link_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:58:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:142:32: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  142 | vbo_delete_minmax_cache(struct gl_buffer_object *bufferObj);
+      |                                ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:151:53: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  151 | vbo_get_minmax_index(struct gl_context *ctx, struct gl_buffer_object *obj,
+      |                                                     ^
+4 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= bitscan.c
+[x86_64] Compile        : glsl_optimizer <= u_debug.c
+[x86_64] Compile        : glsl_optimizer <= vma.c
+[x86_64] Compile        : glsl_optimizer <= half_float.c
+[x86_64] Compile        : glsl_optimizer <= u_process.c
+[x86_64] Compile        : glsl_optimizer <= u_idalloc.c
+[x86_64] Compile        : glsl_optimizer <= u_worklist.c
+[x86_64] Compile        : glsl_optimizer <= u_dl.c
+[x86_64] Compile        : glsl_optimizer <= sparse_array.c
+[x86_64] Compile        : glsl_optimizer <= os_file.c
+[x86_64] Compile        : glsl_optimizer <= fossilize_db.c
+[x86_64] Compile        : glsl_optimizer <= build_id.c
+[x86_64] Compile        : glsl_optimizer <= u_thread.c
+[x86_64] Compile        : glsl_optimizer <= u_printf.c
+[x86_64] Compile        : glsl_optimizer <= rb_tree.c
+[x86_64] Compile        : glsl_optimizer <= rgtc.c
+[x86_64] Compile        : glsl_optimizer <= fast_idiv_by_const.c
+[x86_64] Compile        : glsl_optimizer <= disk_cache_os.c
+[x86_64] Compile        : glsl_optimizer <= strtod.c
+[x86_64] Compile        : glsl_optimizer <= os_misc.c
+[x86_64] Compile        : glsl_optimizer <= blob.c
+[x86_64] Compile        : glsl_optimizer <= u_atomic.c
+[x86_64] Compile        : glsl_optimizer <= register_allocate.c
+[x86_64] Compile        : glsl_optimizer <= crc32.c
+[x86_64] Compile        : glsl_optimizer <= rand_xor.c
+[x86_64] Compile        : glsl_optimizer <= os_memory_fd.c
+[x86_64] Compile        : glsl_optimizer <= hash_table.c
+[x86_64] Compile        : glsl_optimizer <= double.c
+[x86_64] Compile        : glsl_optimizer <= u_hash_table.c
+[x86_64] Compile        : glsl_optimizer <= futex.c
+[x86_64] Compile        : glsl_optimizer <= softfloat.c
+[x86_64] Compile        : glsl_optimizer <= slab.c
+[x86_64] Compile        : glsl_optimizer <= u_call_once.c
+[x86_64] Compile        : glsl_optimizer <= disk_cache.c
+[x86_64] Compile        : glsl_optimizer <= u_debug_memory.c
+[x86_64] Compile        : glsl_optimizer <= u_queue.c
+[x86_64] Compile        : glsl_optimizer <= set.c
+[x86_64] Compile        : glsl_optimizer <= simple_mtx.c
+[x86_64] Compile        : glsl_optimizer <= u_math.c
+[x86_64] Compile        : glsl_optimizer <= mesa-sha1.c
+[x86_64] Compile        : glsl_optimizer <= compress.c
+[x86_64] Compile        : glsl_optimizer <= mesa_cache_db.c
+[x86_64] Compile        : glsl_optimizer <= log.c
+[x86_64] Compile        : glsl_optimizer <= string_buffer.c
+[x86_64] Compile        : glsl_optimizer <= os_socket.c
+[x86_64] Compile        : glsl_optimizer <= mesa_cache_db_multipart.c
+[x86_64] Compile        : glsl_optimizer <= u_mm.c
+[x86_64] Compile        : glsl_optimizer <= anon_file.c
+[x86_64] Compile        : glsl_optimizer <= u_debug_describe.c
+[x86_64] Compile        : glsl_optimizer <= u_cpu_detect.c
+[x86_64] Compile        : glsl_optimizer <= format_srgb.c
+[x86_64] Compile        : glsl_optimizer <= os_time.c
+[x86_64] Compile        : glsl_optimizer <= u_debug_refcnt.c
+[x86_64] Compile        : glsl_optimizer <= dag.c
+[x86_64] Compile        : glsl_optimizer <= u_debug_symbol.c
+[x86_64] Compile        : glsl_optimizer <= streaming-load-memcpy.c
+[x86_64] Compile++      : glsl_optimizer <= glsl_types.cpp
+[x86_64] Compile        : glsl_optimizer <= ralloc.c
+[x86_64] Compile        : glsl_optimizer <= gl_nir_link_uniform_initializers.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_initializers.c:27:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_initializers.c:27:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_opt_dead_builtin_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_opt_dead_builtin_varyings.c:54:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_opt_dead_builtin_varyings.c:54:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_lower_xfb_varying.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_xfb_varying.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_xfb_varying.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_lower_packed_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_packed_varyings.c:151:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:58:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:142:32: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  142 | vbo_delete_minmax_cache(struct gl_buffer_object *bufferObj);
+      |                                ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:151:53: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  151 | vbo_get_minmax_index(struct gl_context *ctx, struct gl_buffer_object *obj,
+      |                                                     ^
+4 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_lower_atomics.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_atomics.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_atomics.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_lower_samplers_as_deref.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_samplers_as_deref.c:65:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_samplers_as_deref.c:65:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_lower_buffers.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_buffers.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_lower_buffers.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_link_xfb.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_xfb.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_xfb.c:30:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_linker.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_linker.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_linker.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_link_uniforms.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniforms.c:32:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniforms.c:32:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_lower_samplers.c
+[x86_64] Compile        : glsl_optimizer <= gl_nir_link_atomics.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_atomics.c:29:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_atomics.c:29:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= shader_enums.c
+[x86_64] Compile        : glsl_optimizer <= gl_nir_link_uniform_blocks.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_blocks.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_uniform_blocks.c:28:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+2 warnings generated.
+[x86_64] Compile        : glsl_optimizer <= gl_nir_lower_images.c
+[x86_64] Compile        : glsl_optimizer <= gl_nir_link_varyings.c
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:54:9: warning: 'MALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   54 | #define MALLOC_STRUCT(T)   (struct T *) MALLOC(sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:56:9: note: previous definition is here
+   56 | #define MALLOC_STRUCT(T)   (struct T *) malloc(sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:43:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/shader_types.h:42:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/p_state.h:47:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../../gallium/include/pipe/../../../util/u_memory.h:56:9: warning: 'CALLOC_STRUCT' macro redefined [-Wmacro-redefined]
+   56 | #define CALLOC_STRUCT(T)   (struct T *) CALLOC(1, sizeof(struct T))
+      |         ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/imports.h:58:9: note: previous definition is here
+   58 | #define CALLOC_STRUCT(T)   (struct T *) calloc(1, sizeof(struct T))
+      |         ^
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/gl_nir_link_varyings.c:33:
+In file included from ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/mtypes.h:58:
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:142:32: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  142 | vbo_delete_minmax_cache(struct gl_buffer_object *bufferObj);
+      |                                ^
+ltw/src/main/tinywrapper/glsl_optimizer/src/compiler/glsl/../../mesa/main/../vbo/vbo.h:151:53: warning: declaration of 'struct gl_buffer_object' will not be visible outside of this function [-Wvisibility]
+  151 | vbo_get_minmax_index(struct gl_context *ctx, struct gl_buffer_object *obj,
+      |                                                     ^
+4 warnings generated.
+[armeabi-v7a] Compile thumb  : sr <= egl.c
+ltw/src/main/tinywrapper/egl.c:46:51: error: invalid application of 'sizeof' to an incomplete type 'struct shader_info_t'
+   46 |     tw_context->shader_info_pool = mempool_create(sizeof(struct shader_info_t), 64);
+      |                                                   ^     ~~~~~~~~~~~~~~~~~~~~~~
+ltw/src/main/tinywrapper/egl.c:46:65: note: forward declaration of 'struct shader_info_t'
+   46 |     tw_context->shader_info_pool = mempool_create(sizeof(struct shader_info_t), 64);
+      |                                                                 ^
+ltw/src/main/tinywrapper/egl.c:48:52: error: invalid application of 'sizeof' to an incomplete type 'struct program_info_t'
+   48 |     tw_context->program_info_pool = mempool_create(sizeof(struct program_info_t), 32);
+      |                                                    ^     ~~~~~~~~~~~~~~~~~~~~~~~
+ltw/src/main/tinywrapper/egl.c:48:66: note: forward declaration of 'struct program_info_t'
+   48 |     tw_context->program_info_pool = mempool_create(sizeof(struct program_info_t), 32);
+      |                                                                  ^
+2 errors generated.
+make: *** [/usr/local/lib/android/sdk/ndk/28.2.13676358/build/core/build-binary.mk:420: ltw/src/main/tinywrapper/obj/local/armeabi-v7a/objs/sr/egl.o] Error 1
+make: *** Waiting for unfinished jobs....
+[armeabi-v7a] Compile thumb  : sr <= glformats.c
+[armeabi-v7a] Compile thumb  : sr <= proc.c
+[armeabi-v7a] Compile thumb  : sr <= main.c
+ltw/src/main/tinywrapper/main.c:198:50: warning: passing 'GLint *' (aka 'int *') to parameter of type 'const GLenum *' (aka 'const unsigned int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+  198 |     swizzle_process_swizzle_param(target, pname, &param);
+      |                                                  ^~~~~~
+ltw/src/main/tinywrapper/swizzle.h:13:87: note: passing argument to parameter 'swizzle' here
+   13 | void swizzle_process_swizzle_param(GLenum target, GLenum swizzle_param, const GLenum* swizzle);
+      |                                                                                       ^
+ltw/src/main/tinywrapper/main.c:216:50: warning: passing 'const GLint *' (aka 'const int *') to parameter of type 'const GLenum *' (aka 'const unsigned int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+  216 |     swizzle_process_swizzle_param(target, pname, params);
+      |                                                  ^~~~~~
+ltw/src/main/tinywrapper/swizzle.h:13:87: note: passing argument to parameter 'swizzle' here
+   13 | void swizzle_process_swizzle_param(GLenum target, GLenum swizzle_param, const GLenum* swizzle);
+      |                                                                                       ^
+ltw/src/main/tinywrapper/main.c:231:50: warning: passing 'const GLint *' (aka 'const int *') to parameter of type 'const GLenum *' (aka 'const unsigned int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+  231 |     swizzle_process_swizzle_param(target, pname, params);
+      |                                                  ^~~~~~
+ltw/src/main/tinywrapper/swizzle.h:13:87: note: passing argument to parameter 'swizzle' here
+   13 | void swizzle_process_swizzle_param(GLenum target, GLenum swizzle_param, const GLenum* swizzle);
+      |                                                                                       ^
+3 warnings generated.
