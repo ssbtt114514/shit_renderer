@@ -154,9 +154,11 @@ void build_extension_string(context_t* context) {
     // Extensions whose backing ES 3.1 core entry points were individually probed
     // in find_esversion().  Advertised only when the function pointers actually
     // resolved, so there is no risk of a silent no-op stub.
-    if(context->multi_draw_indirect_core) {
-        add_extra_extension(context, &length, "GL_ARB_multi_draw_indirect");
-    }
+    // (GL_ARB_multi_draw_indirect is intentionally NOT advertised here: the
+    // unsuffixed desktop entry points have no ES core equivalent, only the
+    // GL_EXT_multi_draw_indirect EXT-suffixed ones, and there is no override
+    // forwarding the desktop names — advertising would route the app into a
+    // silent no-op stub. Use the existing multidraw_indirect flag for that path.)
     if(context->framebuffer_no_attachments) {
         add_extra_extension(context, &length, "GL_ARB_framebuffer_no_attachments");
     }
@@ -210,9 +212,6 @@ static void find_esversion(context_t* context) {
     // backing function pointers actually resolved, so the application never takes
     // a code path that silently no-ops.
     if(context->es31) {
-        context->multi_draw_indirect_core =
-            es3_functions.glMultiDrawArraysIndirect != NULL &&
-            es3_functions.glMultiDrawElementsIndirect != NULL;
         context->framebuffer_no_attachments =
             es3_functions.glFramebufferParameteri != NULL &&
             es3_functions.glGetFramebufferParameteriv != NULL;

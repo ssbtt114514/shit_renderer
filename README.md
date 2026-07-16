@@ -113,7 +113,6 @@ Exposed on OpenGL ES 3.1+ devices (entry points resolve 1:1 to the same-named ES
 
 Exposed when the backing ES 3.1/3.2 core entry points actually resolved via `eglGetProcAddress` (probed at context creation, so no silent no-op stubs):
 
-- `GL_ARB_multi_draw_indirect` — `glMultiDrawArraysIndirect` / `glMultiDrawElementsIndirect` (ES 3.1 core).
 - `GL_ARB_framebuffer_no_attachments` — `glFramebufferParameteri` / `glGetFramebufferParameteriv` (ES 3.1 core).
 - `GL_ARB_vertex_attrib_binding` — `glBindVertexBuffer`, `glVertexAttribBinding`, `glVertexAttribFormat`, `glVertexBindingDivisor` (ES 3.1 core).
 

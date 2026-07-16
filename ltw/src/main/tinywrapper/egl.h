@@ -70,7 +70,7 @@ typedef struct {
     EGLContext phys_context;
     bool context_rdy;
     bool es31, es32, buffer_storage, buffer_texture_ext, multidraw_indirect, timer_query;
-    bool multi_draw_indirect_core, framebuffer_no_attachments, vertex_attrib_binding;
+    bool framebuffer_no_attachments, vertex_attrib_binding;
     bool texture_view, sample_shading;
     GLint shader_version;
     basevertex_renderer_t basevertex;

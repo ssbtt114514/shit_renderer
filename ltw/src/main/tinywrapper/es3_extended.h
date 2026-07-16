@@ -42,8 +42,12 @@ GLESFUNC(glQueryCounterEXT, PFNGLQUERYCOUNTEREXTPROC)
 // eglGetProcAddress on ES 3.1+ devices).  Loaded here so LTW can verify
 // availability before advertising the matching ARB extension, and use
 // them internally when needed.  NULL on ES 3.0 — that is expected.
-GLESFUNC(glMultiDrawArraysIndirect, PFNGLMULTIDRAWARRAYSINDIRECTPROC)
-GLESFUNC(glMultiDrawElementsIndirect, PFNGLMULTIDRAWELEMENTSINDIRECTPROC)
+// NOTE: glMultiDrawArraysIndirect / glMultiDrawElementsIndirect are NOT ES
+// core — they are desktop GL 4.3 core and only exist in ES as the
+// GL_EXT_multi_draw_indirect extension (EXT-suffixed entry points, already
+// declared above).  Do not add the unsuffixed typedef here: the NDK ES
+// headers do not define PFNGL*MULTIDRAW*INDIRECTPROC without an EXT/OES suffix,
+// and doing so breaks the build with "unknown type name".
 GLESFUNC(glFramebufferParameteri, PFNGLFRAMEBUFFERPARAMETERIPROC)
 GLESFUNC(glGetFramebufferParameteriv, PFNGLGETFRAMEBUFFERPARAMETERIVPROC)
 GLESFUNC(glBindVertexBuffer, PFNGLBINDVERTEXBUFFERPROC)
