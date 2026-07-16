@@ -1,6 +1,6 @@
 name: CI
 
-# Comprehensive build, verification and release pipeline for Large Thin Wrapper (LTW).
+# Comprehensive build, verification and release pipeline for shit renderer (LTW).
 # Builds the native AAR for all supported ABIs, verifies the artifact, and publishes
 # a GitHub Release when a version tag (v*) is pushed.
 

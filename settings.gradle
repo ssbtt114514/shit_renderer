@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "GL4ES-Wrapper"
+rootProject.name = "shit-renderer"
 include ':ltw'
 include ':wrapper'

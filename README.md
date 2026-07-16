@@ -1,4 +1,4 @@
-## Large Thin Wrapper
+## shit renderer
 A thin OpenGL core-to-OpenGL ES wrapper, primarily intended for running Minecraft.
 
 # Prerequisites
