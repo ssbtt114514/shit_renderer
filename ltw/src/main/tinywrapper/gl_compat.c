@@ -70,6 +70,16 @@ typedef void (GL_APIENTRY *GLDEBUGPROC)(GLenum source, GLenum type, GLuint id,
 #define GL_MAX_COMPUTE_SHADER_STORAGE_BLOCKS 0x90DB
 #endif
 
+#ifndef GL_R16
+#define GL_R16 0x8229
+#endif
+#ifndef GL_RG16
+#define GL_RG16 0x822B
+#endif
+#ifndef GL_RGBA16
+#define GL_RGBA16 0x822D
+#endif
+
 /* ── 1. glPolygonMode — emulate desktop polygon mode on ES ──────────── */
 
 static GLenum current_polygon_mode = GL_FILL;
@@ -220,9 +230,14 @@ void glProvokingVertex(GLenum mode) {
 void glPrimitiveRestartIndex(GLuint index) {
     if(!current_context) return;
     /* ES 3.0 uses GL_PRIMITIVE_RESTART_FIXED_INDEX which ignores the index.
-       On ES 3.2, glPrimitiveRestartIndex exists and is forwarded. */
-    if(current_context->es32 && es3_functions.glPrimitiveRestartIndex) {
-        es3_functions.glPrimitiveRestartIndex(index);
+       On ES 3.2, glPrimitiveRestartIndex exists and can be called via
+       eglGetProcAddress. */
+    if(current_context->es32) {
+        void (*glPrimitiveRestartIndexPtr)(GLuint) =
+            (void(*)(GLuint))eglGetProcAddress("glPrimitiveRestartIndex");
+        if(glPrimitiveRestartIndexPtr) {
+            glPrimitiveRestartIndexPtr(index);
+        }
     }
     /* On ES 3.0/3.1, the fixed index (~0xFFFFFFFF) is always used when
        GL_PRIMITIVE_RESTART is enabled; we silently accept the call. */

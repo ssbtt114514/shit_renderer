@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdbool.h>
+#include <GLES3/gl3.h>
 
 typedef enum {
     PRECISION_LOW = 0,
