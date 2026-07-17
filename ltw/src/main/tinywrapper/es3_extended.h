@@ -62,8 +62,10 @@ GLESFUNC(glDispatchComputeIndirect, PFNGLDISPATCHCOMPUTEINDIRECTPROC)
 GLESFUNC(glMemoryBarrier, PFNGLMEMORYBARRIERPROC)
 GLESFUNC(glBindImageTexture, PFNGLBINDIMAGETEXTUREPROC)
 
-// OpenGL ES 3.2 core — primitive restart, framebuffer texture, copy image
-GLESFUNC(glPrimitiveRestartIndex, PFNGLPRIMITIVERESTARTINDEXPROC)
+// OpenGL ES 3.2 core — framebuffer texture, copy image
+// NOTE: glPrimitiveRestartIndex is implemented in gl_compat.c and exposed via
+// es3_overrides.h; it is NOT loaded through eglGetProcAddress here because the
+// NDK ES headers do not define PFNGLPRIMITIVERESTARTINDEXPROC.
 GLESFUNC(glFramebufferTexture, PFNGLFRAMEBUFFERTEXTUREPROC)
 GLESFUNC(glCopyImageSubData, PFNGLCOPYIMAGESUBDATAPROC)
 

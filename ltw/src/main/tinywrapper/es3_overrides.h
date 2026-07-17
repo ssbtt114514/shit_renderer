@@ -34,6 +34,22 @@ void glGetQueryObjectiv( 	GLuint id,
 void glDepthRange(GLdouble nearVal,
                   GLdouble farVal);
 
+// ARB matrix uniform aliases (defined in gl_compat.c)
+void glUniformMatrix2x3fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+void glUniformMatrix3x2fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+void glUniformMatrix2x4fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+void glUniformMatrix4x2fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+void glUniformMatrix3x4fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+void glUniformMatrix4x3fvARB(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+
+// EXT tex storage aliases (defined in gl_compat.c)
+void glTexStorage1DEXT(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width);
+void glTexStorage2DEXT(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
+void glTexStorage3DEXT(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth);
+
+// ARB tex buffer range alias (defined in gl_compat.c)
+void glTexBufferRangeARB(GLenum target, GLenum internalFormat, GLuint buffer, GLintptr offset, GLsizeiptr size);
+
 GLESOVERRIDE(glClearDepth)
 GLESOVERRIDE(glMapBuffer)
 GLESOVERRIDE(glGetTexLevelParameteriv)

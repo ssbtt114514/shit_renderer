@@ -52,7 +52,7 @@ static inline void set_ultra_precision(render_config_t* cfg) {
 
 void render_config_init(void) {
     ltw_render_config.precision = PRECISION_HIGH;
-    ltw_render_config.gl_version = GL_VERSION_3_3;
+    ltw_render_config.gl_version = LTW_GL_VERSION_3_3;
     ltw_render_config.enable_anisotropic = true;
     ltw_render_config.enable_float_textures = true;
     ltw_render_config.enable_depth_float = true;
@@ -88,17 +88,17 @@ void render_config_set_precision(render_precision_t precision) {
 void render_config_set_gl_version(gl_version_t version) {
     ltw_render_config.gl_version = version;
     
-    if (version <= GL_VERSION_3_0) {
+    if (version <= LTW_GL_VERSION_3_0) {
         ltw_render_config.enable_float_textures = false;
         ltw_render_config.enable_depth_float = false;
         ltw_render_config.enable_16bit_textures = false;
         ltw_render_config.use_packed_formats = true;
-    } else if (version == GL_VERSION_3_1) {
+    } else if (version == LTW_GL_VERSION_3_1) {
         ltw_render_config.enable_float_textures = false;
         ltw_render_config.enable_depth_float = false;
         ltw_render_config.enable_16bit_textures = true;
         ltw_render_config.use_packed_formats = true;
-    } else if (version == GL_VERSION_3_2) {
+    } else if (version == LTW_GL_VERSION_3_2) {
         ltw_render_config.enable_float_textures = true;
         ltw_render_config.enable_depth_float = true;
         ltw_render_config.enable_16bit_textures = true;
@@ -124,13 +124,13 @@ void render_config_auto_detect(void) {
     const char* ltw_version = getenv("LTW_GL_VERSION");
     if (ltw_version) {
         if (strcmp(ltw_version, "2.1") == 0) {
-            render_config_set_gl_version(GL_VERSION_2_1);
+            render_config_set_gl_version(LTW_GL_VERSION_2_1);
         } else if (strcmp(ltw_version, "3.0") == 0) {
-            render_config_set_gl_version(GL_VERSION_3_0);
+            render_config_set_gl_version(LTW_GL_VERSION_3_0);
         } else if (strcmp(ltw_version, "3.1") == 0) {
-            render_config_set_gl_version(GL_VERSION_3_1);
+            render_config_set_gl_version(LTW_GL_VERSION_3_1);
         } else if (strcmp(ltw_version, "3.2") == 0) {
-            render_config_set_gl_version(GL_VERSION_3_2);
+            render_config_set_gl_version(LTW_GL_VERSION_3_2);
         }
     }
     

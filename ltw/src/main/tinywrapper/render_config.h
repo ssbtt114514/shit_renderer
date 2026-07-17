@@ -12,11 +12,11 @@ typedef enum {
 } render_precision_t;
 
 typedef enum {
-    GL_VERSION_2_1 = 21,
-    GL_VERSION_3_0 = 30,
-    GL_VERSION_3_1 = 31,
-    GL_VERSION_3_2 = 32,
-    GL_VERSION_3_3 = 33
+    LTW_GL_VERSION_2_1 = 21,
+    LTW_GL_VERSION_3_0 = 30,
+    LTW_GL_VERSION_3_1 = 31,
+    LTW_GL_VERSION_3_2 = 32,
+    LTW_GL_VERSION_3_3 = 33
 } gl_version_t;
 
 typedef struct {
