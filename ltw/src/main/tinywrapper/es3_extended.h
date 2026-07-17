@@ -56,6 +56,17 @@ GLESFUNC(glVertexAttribFormat, PFNGLVERTEXATTRIBFORMATPROC)
 GLESFUNC(glVertexAttribIFormat, PFNGLVERTEXATTRIBIFORMATPROC)
 GLESFUNC(glVertexBindingDivisor, PFNGLVERTEXBINDINGDIVISORPROC)
 
+// OpenGL ES 3.1 core — compute, memory barriers, image units, clear buffer
+GLESFUNC(glDispatchCompute, PFNGLDISPATCHCOMPUTEPROC)
+GLESFUNC(glDispatchComputeIndirect, PFNGLDISPATCHCOMPUTEINDIRECTPROC)
+GLESFUNC(glMemoryBarrier, PFNGLMEMORYBARRIERPROC)
+GLESFUNC(glBindImageTexture, PFNGLBINDIMAGETEXTUREPROC)
+
+// OpenGL ES 3.2 core — primitive restart, framebuffer texture, copy image
+GLESFUNC(glPrimitiveRestartIndex, PFNGLPRIMITIVERESTARTINDEXPROC)
+GLESFUNC(glFramebufferTexture, PFNGLFRAMEBUFFERTEXTUREPROC)
+GLESFUNC(glCopyImageSubData, PFNGLCOPYIMAGESUBDATAPROC)
+
 // NOTE: glTextureView / glMinSampleShading are ES 3.2 core functions promoted
 // from OES extensions.  The NDK gl32.h does NOT define PFNGLTEXTUREVIEWPROC or
 // PFNGLMINSAMPLESHADINGPROC (only the OES-suffixed variants).  Do not add the

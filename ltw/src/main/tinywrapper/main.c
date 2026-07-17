@@ -21,6 +21,8 @@
 #include "env.h"
 #include "debug.h"
 #include "mempool.h"
+#include "render_config.h"
+#include <sys/system_properties.h>
 
 void glClearDepth(GLdouble depth) {
     if(!current_context) return;
@@ -300,25 +302,48 @@ const GLubyte* glGetString(GLenum name) {
     if(!current_context) return NULL;
     switch(name) {
         case GL_VERSION: {
-            // Compatibility knob for older Minecraft releases (1.17 and below)
-            // that hard-code checks against the reported OpenGL version. Default
-            // remains 3.3 for modern releases; set LTW_GL_VERSION=3.2 to target
-            // older render paths.
             const char* compat_version = getenv("LTW_GL_VERSION");
-            if(compat_version && strcmp(compat_version, "3.2") == 0) {
-                return (const GLubyte*)"3.2 OpenLTW (Built on: "__DATE__"/"__TIME__")";
+            if(compat_version && strcmp(compat_version, "2.1") == 0) {
+                return (const GLubyte*)"2.1 shit renderer (Built on: "__DATE__"/"__TIME__")";
+            } else if(compat_version && strcmp(compat_version, "3.0") == 0) {
+                return (const GLubyte*)"3.0 shit renderer (Built on: "__DATE__"/"__TIME__")";
+            } else if(compat_version && strcmp(compat_version, "3.1") == 0) {
+                return (const GLubyte*)"3.1 shit renderer (Built on: "__DATE__"/"__TIME__")";
+            } else if(compat_version && strcmp(compat_version, "3.2") == 0) {
+                return (const GLubyte*)"3.2 shit renderer (Built on: "__DATE__"/"__TIME__")";
             }
-            return (const GLubyte*)"3.3 OpenLTW (Built on: "__DATE__"/"__TIME__")";
+            return (const GLubyte*)"3.3 shit renderer (Built on: "__DATE__"/"__TIME__")";
         }
         case GL_SHADING_LANGUAGE_VERSION: {
             const char* compat_version = getenv("LTW_GL_VERSION");
-            if(compat_version && strcmp(compat_version, "3.2") == 0) {
-                return (const GLubyte*)"1.50 LTW";
+            if(compat_version && strcmp(compat_version, "2.1") == 0) {
+                return (const GLubyte*)"1.20 shit renderer";
+            } else if(compat_version && strcmp(compat_version, "3.0") == 0) {
+                return (const GLubyte*)"1.30 shit renderer";
+            } else if(compat_version && strcmp(compat_version, "3.1") == 0) {
+                return (const GLubyte*)"1.40 shit renderer";
+            } else if(compat_version && strcmp(compat_version, "3.2") == 0) {
+                return (const GLubyte*)"1.50 shit renderer";
             }
-            return (const GLubyte*)"4.60 LTW";
+            return (const GLubyte*)"4.60 shit renderer";
         }
-        case GL_VENDOR:
-            return (const GLubyte*)"artDev, SerpentSpirale, CADIndie";
+        case GL_VENDOR: {
+            static char vendor_buf[256];
+            char hw[PROP_VALUE_MAX] = {0};
+            char platform[PROP_VALUE_MAX] = {0};
+            __system_property_get("ro.hardware", hw);
+            __system_property_get("ro.board.platform", platform);
+            if(hw[0] && platform[0]) {
+                snprintf(vendor_buf, sizeof(vendor_buf), "%s/%s - ssbtt", hw, platform);
+            } else if(hw[0]) {
+                snprintf(vendor_buf, sizeof(vendor_buf), "%s - ssbtt", hw);
+            } else {
+                snprintf(vendor_buf, sizeof(vendor_buf), "Unknown SoC - ssbtt");
+            }
+            return (const GLubyte*)vendor_buf;
+        }
+        case GL_RENDERER:
+            return (const GLubyte*)"shit renderer";
         case GL_EXTENSIONS:
             if(current_context->extensions_string != NULL) return (const GLubyte*)current_context->extensions_string;
             return (const GLubyte*)es3_functions.glGetString(GL_EXTENSIONS);
@@ -506,10 +531,17 @@ __attribute((constructor)) void init_noerror() {
     debug = env_istrue("LTW_DEBUG");
     never_flush_buffers = env_istrue_d("LTW_NEVER_FLUSH_BUFFERS", true);
     coherent_dynamic_storage = env_istrue_d("LTW_COHERENT_DYNAMIC_STORAGE", true);
+    
+    render_config_init();
+    render_config_auto_detect();
+    
     if(!noerror) LTW_ERROR_PRINTF("LTW will NOT ignore GL errors. This may break mods, consider yourself warned.");
     if(coherent_dynamic_storage) printf("LTW will force dynamic storage buffers to be coherent.\n");
     if(debug) printf("LTW will allow GL_DEBUG_OUTPUT to be enabled. Expect massive logs.\n");
     if(never_flush_buffers) printf("LTW will prevent all explicit buffer flushes.\n");
+    
+    printf("LTW: Render precision set to level %d\n", ltw_render_config.precision);
+    printf("LTW: GL compatibility mode: %d.%d\n", ltw_render_config.gl_version / 10, ltw_render_config.gl_version % 10);
 }
 
 GLenum glGetError() {

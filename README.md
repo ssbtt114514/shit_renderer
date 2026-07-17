@@ -88,9 +88,10 @@ is what satisfies the feature checks Minecraft performs at startup.
 
 Reported strings:
 
-- `GL_VERSION` → `3.3 OpenLTW (Built on: <date>/<time>)`
-- `GL_SHADING_LANGUAGE_VERSION` → `4.60 LTW`
-- `GL_VENDOR` → `artDev, SerpentSpirale, CADIndie`
+- `GL_VERSION` → `3.3 shit renderer (Built on: <date>/<time>)`
+- `GL_SHADING_LANGUAGE_VERSION` → `4.60 shit renderer`
+- `GL_VENDOR` → `<ro.hardware>/<ro.board.platform> - ssbtt` (e.g. `qcom/sdm865 - ssbtt`)
+- `GL_RENDERER` → `shit renderer`
 
 Exposed ARB extensions (see `build_extension_string()` in [egl.c](ltw/src/main/tinywrapper/egl.c)):
 
@@ -152,3 +153,44 @@ The GLSL shader converter additionally injects `GL_EXT_texture_cube_map_array`,
 | `LTW_DEBUG` | unset | When set to `1`, enables GL_DEBUG_OUTPUT and additional debug logging. |
 | `LTW_NEVER_FLUSH_BUFFERS` | `1` | When set, prevents explicit buffer flushes (glFlushMappedBufferRange), improves performance on some drivers. |
 | `LTW_COHERENT_DYNAMIC_STORAGE` | `1` | When set, forces dynamic storage buffers to be coherent, working around driver bugs. |
+
+## Advanced OpenGL compatibility for Minecraft 1.17 and below
+
+LTW borrows design patterns from [GL4ES](https://github.com/ptitSeb/gl4es) to provide a
+comprehensive set of desktop OpenGL compatibility functions in
+[`gl_compat.c`](ltw/src/main/tinywrapper/gl_compat.c). These functions are essential for
+running Minecraft 1.17 and earlier versions, which use a broader range of desktop GL APIs.
+
+### Implemented function categories
+
+| Category | Functions | Implementation strategy |
+|---|---|---|
+| **Polygon mode** | `glPolygonMode` | Tracking only (ES only supports GL_FILL); state is queryable via `glGetIntegerv` |
+| **1D textures** | `glTexImage1D`, `glTexSubImage1D`, `glCopyTexImage1D`, `glCopyTexSubImage1D`, `glCompressedTexImage1D`, `glCompressedTexSubImage1D`, `glTexStorage1D` | Emulated as 2D textures with height=1 |
+| **Sync objects** | `glFenceSync`, `glIsSync`, `glDeleteSync`, `glClientWaitSync`, `glWaitSync`, `glGetSynciv`, `glGetInteger64v`, `glGetInteger64i_v`, `glGetBufferParameteri64v` | Forwarded to OpenGL ES 3.0 core sync functions |
+| **Framebuffer texture** | `glFramebufferTexture`, `glFramebufferTexture3D`, `glFramebufferTexture1D` | `glFramebufferTexture` uses native ES 3.2 on 3.2 devices, falls back to `glFramebufferTextureLayer` with layer=0 on older ES |
+| **Buffer clearing** | `glClearBufferData`, `glClearBufferSubData` | Emulated via `glMapBufferRange` + `memcpy` pattern fill |
+| **Compute & memory** | `glDispatchCompute`, `glDispatchComputeIndirect`, `glMemoryBarrier`, `glBindImageTexture` | Forwarded to ES 3.1 core when available |
+| **Copy image** | `glCopyImageSubData` | Forwarded to ES 3.2 core when available |
+| **Double precision uniforms** | `glUniform1d`–`glUniform4d`, `glUniform1dv`–`glUniform4dv`, `glUniformMatrix2dv`–`glUniformMatrix4x3dv` | Converted from double to float, forwarded to ES float uniform functions |
+| **VertexAttribL** | `glVertexAttribL1d`–`glVertexAttribL4dv` | Double→float conversion, forwarded to `glVertexAttrib*f` |
+| **Double queries** | `glGetDoublev` | Calls `glGetFloatv` and converts to double |
+| **Packed vertex attribs** | `glVertexAttribP1ui`–`glVertexAttribP4uiv` | Unpacked to float components and forwarded to `glVertexAttrib*f` |
+| **Per-index toggles** | `glEnablei`, `glDisablei`, `glIsEnabledi`, `glGetBooleani_v` | Falls back to global enable/disable (ES 3.2 has native support for some) |
+| **Primitive restart** | `glPrimitiveRestartIndex` | ES 3.2 native; on older ES, fixed index is used silently |
+| **Base vertex draw variants** | `glDrawRangeElements`, `glDrawRangeElementsBaseVertex`, `glDrawElementsInstancedBaseVertex` | Forwards to base vertex renderer or loops over instances |
+| **Sampler I params** | `glSamplerParameterIiv`, `glSamplerParameterIuiv`, `glGetSamplerParameterIiv`, `glGetSamplerParameterIuiv` | Converted to regular integer sampler parameters |
+| **Program uniforms** | `glProgramUniform1f/1i/1fv/1iv/2f/2i/3f/4f/Matrix4fv` | Saves current program, switches to target program, sets uniform, restores |
+| **Texture storage EXT** | `glTexStorage1DEXT`, `glTexStorage2DEXT`, `glTexStorage3DEXT` | Forwarded to ES 3.0 core `glTexStorage2D/3D` |
+| **Framebuffer texture ARB** | `glFramebufferTextureARB`, `glFramebufferTextureLayerARB` | Aliases for core framebuffer texture functions |
+| **Tex buffer range ARB** | `glTexBufferRangeARB` | Forwards to ES 3.2 or EXT tex buffer range |
+| **No-op stubs** | `glClampColor`, `glProvokingVertex`, `glPatchParameteri/fv`, `glTextureBarrier`, `glPolygonOffsetClamp`, `glClipControl`, `glBeginConditionalRender`, `glEndConditionalRender` | Accepted and ignored (no ES equivalent exists) |
+| **Debug messages** | `glDebugMessageInsert`, `glDebugMessageCallback`, `glGetDebugMessageLog`, `glPushDebugGroup`, `glPopDebugGroup`, `glObjectLabel`, `glGetObjectLabel` | No-op (ES debug output not exposed by default) |
+| **ARB instanced draw** | `glDrawArraysInstancedARB`, `glDrawElementsInstancedARB` | Forwarded to ES 3.0 `glDrawArraysInstanced`/`glDrawElementsInstanced` |
+| **ARB matrix uniforms** | `glUniformMatrix2x3fvARB`–`glUniformMatrix4x3fvARB` | Forwarded to ES 3.0 matrix uniform functions |
+| **Query objects** | `glGenQueries`, `glDeleteQueries`, `glIsQuery`, `glBeginQuery`, `glEndQuery`, `glGetQueryiv`, `glGetQueryObjectuiv` | Forwarded to ES 3.0 query functions |
+| **Transform feedback** | `glBeginTransformFeedback`, `glEndTransformFeedback`, `glTransformFeedbackVaryings` | Forwarded to ES 3.0 transform feedback functions |
+| **Texture clearing** | `glClearTexImage`, `glClearTexSubImage` | Best-effort emulation with debug logging |
+| **Invalidation** | `glInvalidateFramebuffer`, `glInvalidateSubFramebuffer`, `glInvalidateTexImage`, `glInvalidateTexSubImage`, `glInvalidateBufferData`, `glInvalidateBufferSubData` | Framebuffer variants forwarded to ES 3.0; others are no-op |
+| **Internal format** | `glGetInternalformativ` | Forwarded to ES 3.0 core |
+| **TexParameter I** | `glGetTexParameterIiv`, `glGetTexParameterIuiv` | Forwarded to regular `glGetTexParameteriv` |

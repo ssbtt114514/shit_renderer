@@ -9,6 +9,7 @@
 #include "glformats.h"
 #include "libraryinternal.h"
 #include "GL/gl.h"
+#include "render_config.h"
 #include <stdio.h>
 
 static GLint pick_depth_internalformat(GLenum* type, bool* convert) {
@@ -78,21 +79,20 @@ void pick_format(GLint *internalformat, GLenum* type, GLenum* format) {
         // Two legacy GL formats. From testing, OptiFine wants these to be floats.
         case GL_RGBA12:
         case GL_RGBA16:
-            *internalformat = GL_RGBA16F;
+            *internalformat = ltw_render_config.enable_float_textures ? GL_RGBA16F : GL_RGBA8;
             break;
-        // Always use 32-bit float depth for GL_DEPTH_COMPONENT, because the 16-bit depth buffer
-        // causes z-fighting in the distance
+        // Depth format selection based on render config
         case GL_DEPTH_COMPONENT:
-            *internalformat = GL_DEPTH_COMPONENT32F;
+            *internalformat = render_config_pick_depth_format(GL_DEPTH_COMPONENT);
             break;
         // This appears to be one of the legacy formats from the FPE days, and is not even
         // listed in the format tables in 3.3 core. Still, MC uses it for the depth buffers.
         case GL_DEPTH_COMPONENT32:
-            *internalformat = GL_DEPTH_COMPONENT32F;
+            *internalformat = render_config_pick_depth_format(GL_DEPTH_COMPONENT32F);
             break;
         // Unsized depth-stencil. Not sure what uses it but we'll fall back to 24-bit + 8-bit stencil
         case GL_DEPTH_STENCIL:
-            *internalformat = GL_DEPTH24_STENCIL8;
+            *internalformat = render_config_pick_depth_format(GL_DEPTH_STENCIL);
             break;
         // Color-renderability workarounds. Yes, those probably decrease performance but they sure do improve compatibility with shaderpacks!
         // Ideally these should only be used on framebuffers, but whatever.
@@ -100,11 +100,13 @@ void pick_format(GLint *internalformat, GLenum* type, GLenum* format) {
         // Sadly, the only alternative format with the same capabilities that *is* color-renderable in ES is 16-bit float.
         // So, switch to that.
         case GL_R8_SNORM:
-            *internalformat = GL_R16F;
+            *internalformat = ltw_render_config.enable_float_textures ? GL_R16F : GL_R8;
+            break;
         case GL_RG8_SNORM:
-            *internalformat = GL_RG16F;
+            *internalformat = ltw_render_config.enable_float_textures ? GL_RG16F : GL_RG8;
+            break;
         case GL_RGBA8_SNORM:
-            *internalformat = GL_RGBA16F;
+            *internalformat = ltw_render_config.enable_float_textures ? GL_RGBA16F : GL_RGBA8;
             break;
         // Fun fact: the only color renderable formats in GLES that have 3 components are
         // GL_R11F_G11F_B10F and GL_RGB8. And only GL_R11F_G11F_B10F supports signed values.
@@ -114,9 +116,12 @@ void pick_format(GLint *internalformat, GLenum* type, GLenum* format) {
         case GL_RGB8_SNORM:
         case GL_RGB12:
         case GL_RGB16:
+            *internalformat = ltw_render_config.enable_float_textures ? GL_R11F_G11F_B10F : GL_RGB8;
+            break;
         case GL_RGB16F:
         case GL_RGB32F:
-            *internalformat = GL_R11F_G11F_B10F;
+            *internalformat = render_config_pick_color_format(*internalformat);
+            break;
         case GL_RGB8UI:
             *internalformat = GL_RGB8;
             break;
