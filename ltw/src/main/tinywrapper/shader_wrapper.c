@@ -15,6 +15,8 @@
 #include "proc.h"
 #include "debug.h"
 #include "mempool.h"
+#include "arbconverter.h"
+#include "glsl_for_es.h"
 
 #define SHADER_CACHE_SIZE 256
 #define SHADER_CACHE_STATS 1
@@ -320,19 +322,69 @@ void glShaderSource(GLuint shader, GLsizei count, const GLchar *const*string, co
     }
     target_string[target_length] = 0;
 #undef SRC_LEN
-    size_t source_hash = hash_string(target_string);
+
+    GLchar* processed_source = target_string;
+    bool is_arb = false;
+    bool needs_es_conversion = false;
+    int target_es_version = 30;
+
+    const char* gl_version_env = getenv("LTW_GL_VERSION");
+    if (gl_version_env) {
+        if (strcmp(gl_version_env, "2.1") == 0) {
+            target_es_version = 20;
+            needs_es_conversion = true;
+        } else if (strcmp(gl_version_env, "3.0") == 0) {
+            target_es_version = 20;
+            needs_es_conversion = true;
+        } else if (strcmp(gl_version_env, "3.1") == 0) {
+            target_es_version = 30;
+            needs_es_conversion = true;
+        } else if (strcmp(gl_version_env, "3.2") == 0) {
+            target_es_version = 30;
+            needs_es_conversion = true;
+        }
+    }
+
+    if (ltw_is_arb_program(target_string)) {
+        is_arb = true;
+        char* error_msg = NULL;
+        int error_pos = 0;
+        GLchar* converted = ltw_convert_arb_to_glsl(target_string, 
+            shader_info->shader_type == GL_VERTEX_SHADER, &error_msg, &error_pos);
+        free(target_string);
+        if (converted) {
+            processed_source = converted;
+            LTW_DEBUG_PRINTF("LTWShdrWp: converted ARB program to GLSL");
+        } else {
+            LTW_ERROR_PRINTF("LTWShdrWp: ARB conversion failed: %s", error_msg ? error_msg : "unknown");
+            free(error_msg);
+            processed_source = strdup("void main() {}");
+        }
+    }
+
+    if (needs_es_conversion && !is_arb) {
+        GLchar* converted = ltw_convert_glsl_for_es(processed_source, 
+            shader_info->shader_type, target_es_version);
+        if (converted) {
+            if (processed_source != target_string) free(processed_source);
+            processed_source = converted;
+            LTW_DEBUG_PRINTF("LTWShdrWp: converted GLSL for ES %d", target_es_version);
+        }
+    }
+
+    size_t source_hash = hash_string(processed_source);
     GLchar* cached_source = get_cached_shader(source_hash, shader_info->shader_type);
     if (cached_source != NULL) {
         if(shader_info->source != NULL) free((void*)shader_info->source);
         char* new_source = strdup(cached_source);
         if(!new_source) {
             LTW_ERROR_PRINTF("LTWShdrWp: failed to duplicate cached shader source");
-            free(target_string);
+            free(processed_source);
             return;
         }
         shader_info->source = new_source;
         es3_functions.glShaderSource(shader, 1, &shader_info->source, 0);
-        free(target_string);
+        free(processed_source);
 #ifdef SHADER_CACHE_STATS
         static int compile_count = 0;
         if (++compile_count % 100 == 0) {
@@ -341,10 +393,15 @@ void glShaderSource(GLuint shader, GLsizei count, const GLchar *const*string, co
 #endif
         return;
     }
-    GLchar* new_source = optimize_shader(target_string, shader_info->shader_type, 460, current_context->shader_version);
+
+    GLchar* new_source = optimize_shader(processed_source, shader_info->shader_type, 460, current_context->shader_version);
+    if (!new_source) {
+        LTW_ERROR_PRINTF("LTWShdrWp: optimize_shader failed, using original");
+        new_source = strdup(processed_source);
+    }
     cache_shader(source_hash, shader_info->shader_type, new_source);
     if(shader_info->source != NULL) free((void*)shader_info->source);
     shader_info->source = new_source;
     es3_functions.glShaderSource(shader, 1, &shader_info->source, 0);
-    free(target_string);
+    free(processed_source);
 }

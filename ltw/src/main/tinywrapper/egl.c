@@ -178,39 +178,52 @@ void build_extension_string(context_t* context) {
     int length;
     init_extra_extensions(context, &length);
 
-    // Compatibility mode for older Minecraft releases (1.17 and below). When
-    // LTW_GL_VERSION=3.2 is set we omit extensions that only exist on ES 3.1/3.2
-    // so the application does not take render paths that require compute shaders,
-    // SSBOs, indirect drawing, etc.
     const char* compat_version = getenv("LTW_GL_VERSION");
-    bool compat_3_2 = compat_version && strcmp(compat_version, "3.2") == 0;
-    if(context->buffer_storage) {
+    int gl_version_major = 3, gl_version_minor = 3;
+    
+    if (compat_version) {
+        sscanf(compat_version, "%d.%d", &gl_version_major, &gl_version_minor);
+    }
+    
+    bool is_compat_21 = (gl_version_major == 2 && gl_version_minor == 1);
+    bool is_compat_30 = (gl_version_major == 3 && gl_version_minor == 0);
+    bool is_compat_31 = (gl_version_major == 3 && gl_version_minor == 1);
+    bool is_compat_32 = (gl_version_major == 3 && gl_version_minor == 2);
+
+    add_extra_extension(context, &length, "GL_ARB_multitexture");
+    add_extra_extension(context, &length, "GL_ARB_texture_env_combine");
+    add_extra_extension(context, &length, "GL_ARB_texture_env_dot3");
+    add_extra_extension(context, &length, "GL_ARB_texture_cube_map");
+    add_extra_extension(context, &length, "GL_ARB_draw_buffers");
+    add_extra_extension(context, &length, "GL_ARB_point_sprite");
+    add_extra_extension(context, &length, "GL_ARB_fragment_shader");
+    add_extra_extension(context, &length, "GL_ARB_vertex_shader");
+    add_extra_extension(context, &length, "GL_ARB_shader_objects");
+    add_extra_extension(context, &length, "GL_ARB_shading_language_100");
+    add_extra_extension(context, &length, "GL_ARB_depth_texture");
+    add_extra_extension(context, &length, "GL_ARB_occlusion_query");
+    add_extra_extension(context, &length, "GL_ARB_color_buffer_float");
+    add_extra_extension(context, &length, "GL_ARB_half_float_pixel");
+    add_extra_extension(context, &length, "GL_ARB_half_float_vertex");
+
+    if(context->buffer_storage && !is_compat_21) {
         if(!env_istrue("LTW_HIDE_BUFFER_STORAGE"))
             add_extra_extension(context, &length, "GL_ARB_buffer_storage");
         else LTW_ERROR_PRINTF("LTW: The buffer storage extension is hidden.");
     }
-    if(context->buffer_texture_ext || context->es32) {
+    if((context->buffer_texture_ext || context->es32) && !is_compat_21) {
         add_extra_extension(context, &length, "GL_ARB_texture_buffer_object");
     }
     add_extra_extension(context, &length, "GL_ARB_draw_elements_base_vertex");
-    // Required by Iris. Indexed variants are available since ES3.2 or with OES/EXT_draw_buffers_indexed extensions
-    if(context->blending.available)
+    
+    if(context->blending.available && !is_compat_21)
         add_extra_extension(context, &length, "GL_ARB_draw_buffers_blend");
-    // Used by Minecraft for the GPU usage counter (see Blaze3D TimerQuery)
+    
     add_extra_extension(context, &length, "GL_ARB_timer_query");
-
-    // Immutable texture storage is core since OpenGL ES 3.0; glTexStorage2D/3D pass through directly.
     add_extra_extension(context, &length, "GL_ARB_texture_storage");
-
-    // ESSL 3.00 (ES 3.0) provides the pack/unpack built-in functions that
-    // GL_ARB_shading_language_packing advertises on desktop GL.
     add_extra_extension(context, &length, "GL_ARB_shading_language_packing");
 
-    // The ARB extensions below map 1:1 to OpenGL ES 3.1 core entry points. Their functions resolve
-    // to the driver's own (same-named) ES implementations through eglGetProcAddress, and the desktop
-    // GLSL is lowered to ESSL by the optimizer (see shader_wrapper.c / glsl_optimizer). Exposed only
-    // on devices that actually report ES 3.1, so the application never takes an unsupported path.
-    if(context->es31 && !compat_3_2) {
+    if(context->es31 && !is_compat_21 && !is_compat_30 && !is_compat_31 && !is_compat_32) {
         add_extra_extension(context, &length, "GL_ARB_draw_indirect");
         add_extra_extension(context, &length, "GL_ARB_texture_multisample");
         add_extra_extension(context, &length, "GL_ARB_texture_storage_multisample");
@@ -221,34 +234,83 @@ void build_extension_string(context_t* context) {
         add_extra_extension(context, &length, "GL_ARB_shader_image_size");
         add_extra_extension(context, &length, "GL_ARB_shader_atomic_counters");
         add_extra_extension(context, &length, "GL_ARB_program_interface_query");
-        // ESSL 3.10 provides precise, fma, bitfield manipulation, etc.
         add_extra_extension(context, &length, "GL_ARB_gpu_shader5");
     }
 
-    // Extensions whose backing ES 3.1 core entry points were individually probed
-    // in find_esversion().  Advertised only when the function pointers actually
-    // resolved, so there is no risk of a silent no-op stub.
-    // (GL_ARB_multi_draw_indirect is intentionally NOT advertised here: the
-    // unsuffixed desktop entry points have no ES core equivalent, only the
-    // GL_EXT_multi_draw_indirect EXT-suffixed ones, and there is no override
-    // forwarding the desktop names — advertising would route the app into a
-    // silent no-op stub. Use the existing multidraw_indirect flag for that path.)
-    if(context->framebuffer_no_attachments) {
+    if(context->framebuffer_no_attachments && !is_compat_21) {
         add_extra_extension(context, &length, "GL_ARB_framebuffer_no_attachments");
     }
-    if(context->vertex_attrib_binding) {
+    if(context->vertex_attrib_binding && !is_compat_21) {
         add_extra_extension(context, &length, "GL_ARB_vertex_attrib_binding");
     }
 
-    // glCopyImageSubData is core since OpenGL ES 3.2.
-    if(context->es32 && !compat_3_2) {
+    if(context->es32 && !is_compat_21 && !is_compat_30 && !is_compat_31 && !is_compat_32) {
         add_extra_extension(context, &length, "GL_ARB_copy_image");
     }
 
-    // NOTE: GL_ARB_texture_view / GL_ARB_sample_shading are NOT advertised here
-    // because the NDK gl32.h does not define the unsuffixed PFN typedefs for
-    // glTextureView / glMinSampleShading (only OES-suffixed variants exist).
-    // When support is needed, add forwarding overrides in es3_overrides.h.
+    add_extra_extension(context, &length, "GL_EXT_framebuffer_object");
+    add_extra_extension(context, &length, "GL_EXT_texture_compression_s3tc");
+    add_extra_extension(context, &length, "GL_EXT_texture_filter_anisotropic");
+    add_extra_extension(context, &length, "GL_EXT_blend_func_separate");
+    add_extra_extension(context, &length, "GL_EXT_blend_color");
+    add_extra_extension(context, &length, "GL_EXT_blend_equation_separate");
+    add_extra_extension(context, &length, "GL_EXT_texture_format_BGRA8888");
+    add_extra_extension(context, &length, "GL_EXT_texture_rg");
+    add_extra_extension(context, &length, "GL_EXT_texture_type_2_10_10_10_REV");
+    add_extra_extension(context, &length, "GL_EXT_draw_range_elements");
+    add_extra_extension(context, &length, "GL_EXT_gpu_shader4");
+    add_extra_extension(context, &length, "GL_EXT_shadow_samplers");
+    add_extra_extension(context, &length, "GL_EXT_texture_array");
+    add_extra_extension(context, &length, "GL_EXT_draw_buffers");
+    add_extra_extension(context, &length, "GL_EXT_depth_clamp");
+    add_extra_extension(context, &length, "GL_EXT_provoking_vertex");
+    add_extra_extension(context, &length, "GL_EXT_texture_swizzle");
+    add_extra_extension(context, &length, "GL_EXT_texture_compression_dxt1");
+    add_extra_extension(context, &length, "GL_EXT_texture_compression_dxt3");
+    add_extra_extension(context, &length, "GL_EXT_texture_compression_dxt5");
+    add_extra_extension(context, &length, "GL_EXT_multisampled_render_to_texture");
+    add_extra_extension(context, &length, "GL_EXT_multisampled_render_to_texture2");
+    add_extra_extension(context, &length, "GL_EXT_copy_texture");
+    add_extra_extension(context, &length, "GL_EXT_texture_sRGB_decode");
+    add_extra_extension(context, &length, "GL_EXT_shader_framebuffer_fetch");
+    add_extra_extension(context, &length, "GL_EXT_shader_io_blocks");
+    add_extra_extension(context, &length, "GL_EXT_tessellation_shader");
+    add_extra_extension(context, &length, "GL_EXT_geometry_shader");
+    add_extra_extension(context, &length, "GL_EXT_gpu_shader5");
+    add_extra_extension(context, &length, "GL_EXT_primitive_bounding_box");
+    add_extra_extension(context, &length, "GL_EXT_texture_buffer");
+    add_extra_extension(context, &length, "GL_EXT_texture_storage");
+    add_extra_extension(context, &length, "GL_EXT_shader_storage_buffer_object");
+    add_extra_extension(context, &length, "GL_EXT_compute_shader");
+    add_extra_extension(context, &length, "GL_EXT_shader_image_load_store");
+    add_extra_extension(context, &length, "GL_EXT_shader_image_size");
+    add_extra_extension(context, &length, "GL_EXT_shader_atomic_counters");
+    add_extra_extension(context, &length, "GL_EXT_program_interface_query");
+    add_extra_extension(context, &length, "GL_EXT_draw_elements_base_vertex");
+    add_extra_extension(context, &length, "GL_EXT_draw_buffers_indexed");
+    add_extra_extension(context, &length, "GL_EXT_blend_func_extended");
+    add_extra_extension(context, &length, "GL_EXT_blend_minmax");
+    add_extra_extension(context, &length, "GL_EXT_depth_bounds_test");
+    add_extra_extension(context, &length, "GL_EXT_polygon_offset_clamp");
+    add_extra_extension(context, &length, "GL_EXT_texture_norm16");
+    add_extra_extension(context, &length, "GL_EXT_disjoint_timer_query");
+    add_extra_extension(context, &length, "GL_EXT_multi_draw_indirect");
+    add_extra_extension(context, &length, "GL_EXT_frag_depth");
+    add_extra_extension(context, &length, "GL_EXT_shader_texture_lod");
+    add_extra_extension(context, &length, "GL_EXT_shadow_samplers_array");
+    add_extra_extension(context, &length, "GL_EXT_texture_cube_map_array");
+    add_extra_extension(context, &length, "GL_EXT_color_buffer_half_float");
+    add_extra_extension(context, &length, "GL_EXT_color_buffer_float");
+    add_extra_extension(context, &length, "GL_EXT_float_blend");
+    add_extra_extension(context, &length, "GL_EXT_robustness");
+    add_extra_extension(context, &length, "GL_EXT_direct_state_access");
+    add_extra_extension(context, &length, "GL_EXT_buffer_storage");
+    add_extra_extension(context, &length, "GL_EXT_framebuffer_no_attachments");
+    add_extra_extension(context, &length, "GL_EXT_vertex_attrib_binding");
+    add_extra_extension(context, &length, "GL_EXT_copy_image");
+    add_extra_extension(context, &length, "GL_EXT_texture_view");
+    add_extra_extension(context, &length, "GL_EXT_sample_shading");
+
     fin_extra_extensions(context, length);
 }
 

@@ -8,7 +8,7 @@
 #define MEMPOOL_MAX_POOLS 8
 #define MEMPOOL_CHUNK_SIZE 64
 #define MEMPOOL_ALIGNMENT 16
-#define MEMPOOL_DEFAULT_MAX_MEMORY (256 * 1024 * 1024)
+#define MEMPOOL_DEFAULT_MAX_MEMORY (2048 * 1024 * 1024)
 
 typedef struct mempool_block {
     struct mempool_block* next;

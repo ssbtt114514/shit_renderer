@@ -410,6 +410,8 @@ LOCAL_SRC_FILES := \
     mempool.c \
     gl_compat.c \
     render_config.c \
+    arbconverter.c \
+    glsl_for_es.c \
     vgpu_shaderconv/shaderconv.c \
     unordered_map/unordered_map.c \
     unordered_map/int_hash.c
