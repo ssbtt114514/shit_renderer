@@ -327,21 +327,8 @@ const GLubyte* glGetString(GLenum name) {
             }
             return (const GLubyte*)"4.60 shit renderer";
         }
-        case GL_VENDOR: {
-            static char vendor_buf[256];
-            char hw[PROP_VALUE_MAX] = {0};
-            char platform[PROP_VALUE_MAX] = {0};
-            __system_property_get("ro.hardware", hw);
-            __system_property_get("ro.board.platform", platform);
-            if(hw[0] && platform[0]) {
-                snprintf(vendor_buf, sizeof(vendor_buf), "%s/%s - ssbtt", hw, platform);
-            } else if(hw[0]) {
-                snprintf(vendor_buf, sizeof(vendor_buf), "%s - ssbtt", hw);
-            } else {
-                snprintf(vendor_buf, sizeof(vendor_buf), "Unknown SoC - ssbtt");
-            }
-            return (const GLubyte*)vendor_buf;
-        }
+        case GL_VENDOR:
+            return (const GLubyte*)"ssbtt";
         case GL_RENDERER:
             return (const GLubyte*)"shit renderer";
         case GL_EXTENSIONS:
@@ -518,10 +505,6 @@ void glTexBufferRange(GLenum target, GLenum internalFormat, GLuint buffer, GLint
         buf_tex_trigger = true;
         LTW_ERROR_PRINTF("LTW: Buffer textures aren't supported on your device");
     }
-}
-
-void glTexBufferRangeARB(GLenum target, GLenum internalFormat, GLuint buffer, GLintptr offset, GLsizeiptr size) {
-    glTexBufferRange(target, internalFormat, buffer, offset, size);
 }
 
 static bool noerror;
